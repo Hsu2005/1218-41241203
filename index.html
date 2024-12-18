@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代辦事項管理</title>
+    <style>
+        /* 額外的CSS樣式，可以自定義 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #task-list {
+            margin-top: 20px;
+        }
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+        }
+        input[type="text"] {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>代辦事項管理</h1>
+
+    <!-- 顯示學生的代辦事項 -->
+    <div>
+        <label for="student-id">學號：</label>
+        <input type="text" id="student-id" placeholder="請輸入學號" />
+        <button id="load-tasks-btn">載入代辦事項</button>
+    </div>
+
+    <div id="task-list"></div>
+
+    <!-- 用戶填寫資料新增代辦事項 -->
+    <div>
+        <h2>新增代辦事項</h2>
+        <input type="text" id="new-task-input" placeholder="任務名稱" />
+        <button id="add-task-btn">新增代辦事項</button>
+    </div>
+
+    <!-- 用戶編輯代辦事項 -->
+    <div id="edit-task-form" style="display:none;">
+        <h2>編輯代辦事項</h2>
+        <input type="text" id="edit-task-input" placeholder="任務名稱" />
+        <input type="checkbox" id="edit-completed"> 完成
+        <button id="save-task-btn">保存</button>
+        <button id="cancel-task-btn">取消</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
